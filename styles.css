@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.bg-dinamico {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(-45deg, #e76f51, #f4a261, #23a6d5, #2a9d8f);
+  background-size: 400% 400%;
+  animation: gradienteMovimento 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradienteMovimento {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 340px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    margin: 25px 0;
+    padding: 10px;
+    font-size: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+button:active{
+    opacity: 0.5;
+}
+
+#rock {
+    background-color: #f4a261;
+
+}
+
+#scissors{
+    background-color: #23a6d5;
+    
+}
+
+#paper {
+    background-color: #e76f51;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 44px;
+}
+
+p {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.your-score span {
+    color:#3f8efb;
+}
+
+.machine-score span {
+    color: #ee866a;
+}
